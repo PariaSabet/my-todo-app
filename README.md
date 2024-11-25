@@ -1,4 +1,4 @@
-# Modern Todo App with Next.js, Redux, and TypeScript
+# Retro Todo App with Next.js and Redux
 
 A feature-rich, responsive todo application built with modern web technologies. This project demonstrates clean architecture, state management, and responsive design principles.
 
