@@ -1,36 +1,26 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Modern Todo App with Next.js, Redux, and TypeScript
 
-## Getting Started
+A feature-rich, responsive todo application built with modern web technologies. This project demonstrates clean architecture, state management, and responsive design principles.
 
-First, run the development server:
+![Todo App Screenshot]
+![CleanShot 2024-11-25 at 12 01 11@2x](https://github.com/user-attachments/assets/66152bcb-3ee6-4f06-9f13-7fae6fcaa091)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+![CleanShot 2024-11-25 at 12 04 15@2x](https://github.com/user-attachments/assets/a7299868-3156-4fea-a503-f98062361caf)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🌟 Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- ✅ Create, edit, and delete todos
+- 📊 Statistics dashboard
+- 🏷️ Category management (work, personal, shopping, etc.)
+- 🔍 Filter todos by category and status
+- 💾 Local storage persistence
+- 📱 Fully responsive design
+- 🎨 Clean and modern UI with Tailwind CSS
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Technologies Used
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Next.js 14** - React framework for production
+- **Redux Toolkit** - State management
+- **TypeScript** - Type safety and better developer experience
+- **Tailwind CSS** - Utility-first CSS framework
+- **Local Storage** - For data persistence
