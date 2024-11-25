@@ -4,7 +4,6 @@ https://myretrotodoapp.netlify.app/
 
 A feature-rich, responsive todo application built with modern web technologies. This project demonstrates clean architecture, state management, and responsive design principles.
 
-![Todo App Screenshot]
 ![CleanShot 2024-11-25 at 12 01 11@2x](https://github.com/user-attachments/assets/66152bcb-3ee6-4f06-9f13-7fae6fcaa091)
 
 ![CleanShot 2024-11-25 at 12 04 15@2x](https://github.com/user-attachments/assets/a7299868-3156-4fea-a503-f98062361caf)
