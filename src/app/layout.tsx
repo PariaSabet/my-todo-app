@@ -1,8 +1,20 @@
-'use client';
-
-import { Provider } from 'react-redux';
-import { store } from '@/store/store';
 import './globals.css';
+import type { Metadata } from 'next';
+import { ReduxProvider } from '@/store/provider';
+
+export const metadata: Metadata = {
+  title: 'Todo List',
+  description: 'A minimal todo list application',
+  icons: {
+    icon: [
+      { url: '/list.svg', type: 'image/svg+xml' }
+    ],
+    shortcut: ['/list.svg'],
+    apple: [
+      { url: '/list.svg', type: 'image/svg+xml' }
+    ]
+  },
+};
 
 export default function RootLayout({
   children,
@@ -12,9 +24,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Provider store={store}>
+        <ReduxProvider>
           {children}
-        </Provider>
+        </ReduxProvider>
       </body>
     </html>
   );

@@ -78,7 +78,7 @@ export default function Home() {
         </div>
 
         {/* Filters */}
-        <div className="mb-4 md:mb-6 flex flex-col md:flex-row gap-2 md:gap-4">
+        <div className="mb-4 md:mb-6 flex flex-col justify-between md:flex-row gap-2 md:gap-4">
           <select
             value={filter.category}
             onChange={(e) => dispatch(setFilter({ category: e.target.value as TodoCategory | 'all' }))}
@@ -105,7 +105,7 @@ export default function Home() {
 
         {/* Add Todo Form */}
         <form onSubmit={handleSubmit} className="mb-6 md:mb-8">
-          <div className="flex flex-col md:flex-row gap-2 md:gap-3">
+          <div className="flex flex-col gap-2">
             <input
               type="text"
               value={newTodo}
@@ -117,7 +117,7 @@ export default function Home() {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value as TodoCategory)}
-                className="w-full md:w-32 pl-4 py-2.5 bg-white border border-gray-200 rounded-lg text-gray-700 text-sm focus:outline-none focus:border-gray-400"
+                className="flex-1 pl-4 py-2.5 bg-white border border-gray-200 rounded-lg text-gray-700 text-sm focus:outline-none focus:border-gray-400"
               >
                 {categories.map(category => (
                   <option key={category} value={category}>
@@ -143,18 +143,18 @@ export default function Home() {
               className="flex items-center gap-3 p-3 md:p-4 border border-gray-100 rounded-xl hover:border-gray-200 transition-colors bg-white"
             >
               {editingTodo?.id === todo.id ? (
-                <form onSubmit={handleEdit} className="flex-1 flex flex-col md:flex-row gap-2 md:gap-3">
+                <form onSubmit={handleEdit} className="w-full flex flex-col gap-2">
                   <input
                     type="text"
                     value={editingTodo.text}
                     onChange={(e) => setEditingTodo({ ...editingTodo, text: e.target.value })}
-                    className="flex-1 px-3 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-gray-400"
+                    className="w-full px-4 py-2.5 bg-white border border-gray-200 rounded-lg text-gray-700 text-sm focus:outline-none focus:border-gray-400"
                   />
                   <div className="flex gap-2">
                     <select
                       value={editingTodo.category}
                       onChange={(e) => setEditingTodo({ ...editingTodo, category: e.target.value as TodoCategory })}
-                      className="w-32 px-3 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-gray-400"
+                      className="flex-1 pl-4 py-2.5 bg-white border border-gray-200 rounded-lg text-gray-700 text-sm focus:outline-none focus:border-gray-400"
                     >
                       {categories.map(category => (
                         <option key={category} value={category}>
@@ -162,11 +162,16 @@ export default function Home() {
                         </option>
                       ))}
                     </select>
-                    <button type="submit" className="px-4 py-2 bg-[#ff5d3b] text-white rounded-lg text-sm">Save</button>
+                    <button 
+                      type="submit" 
+                      className="px-6 py-2.5 bg-[#ff5d3b] text-white rounded-lg text-sm hover:bg-[#ff4722] transition-colors whitespace-nowrap"
+                    >
+                      Save
+                    </button>
                     <button 
                       type="button" 
                       onClick={() => setEditingTodo(null)} 
-                      className="px-4 py-2 bg-gray-100 text-gray-600 rounded-lg text-sm hover:bg-gray-200"
+                      className="px-4 py-2.5 text-gray-600 rounded-lg text-sm hover:bg-gray-100 transition-colors whitespace-nowrap"
                     >
                       Cancel
                     </button>
